@@ -1,0 +1,15 @@
+<form (ngSubmit)="createOrUpdate()">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" name="_id" [(ngModel)]="task._id" class="form-control" disabled>
+  </div>
+  <div class="form-group">
+    <label for="id">Task</label>
+    <input type="text" name="taskName" [(ngModel)]="task.taskName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="id">Description</label>
+    <input type="text" name="description" [(ngModel)]="task.description" class="form-control">
+  </div>
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>

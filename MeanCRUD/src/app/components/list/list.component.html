@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">My Tasks</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Capital</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{task._id}}</td>
+          <td>{{task.taskName}}</td>
+          <td>{{task.description}}</td>
+          <td><button class="btn btn-danger" (click)="doDeleteTask(task)">Delete</button>&nbsp;&nbsp;
+             <button class="btn btn-primary" (click)="doUpdateTask(task)">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
